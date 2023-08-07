@@ -4,13 +4,14 @@ const posthtml = require('posthtml');
 const inlineAssets = require('posthtml-inline-assets');
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
 // Middleware to parse incoming JSON data
 app.use(bodyParser.json());
 
 // API endpoint to process HTML content
 app.post('/process-html', (req, res) => {
+  console.log("received it here");
   // Get the HTML content from the request body
   const htmlContent = req.body.html;
 
